@@ -1,0 +1,115 @@
+(1)
+#Write a python function to reverse a string, import the module to reverse a string input by the user 
+import Reverse
+str1=input("Enter String     ")
+print("Reversed String is:  ",Reverse.string_reverse(str1))
+
+(2)
+# Write a Python function to check whether a number is in a given range. Import the module to input a number and check whether is in a given range 
+from range import in_range
+
+start = int(input("Start: "))
+end = int(input("End: "))
+num = int(input("Number: "))
+
+print("Number in range: ",in_range(start,end,num))
+
+(3)
+# write a python function that takes a list and returns a new list with unique elemnets in the first list. Import the module and input a list to find the unique elements in a list  
+from unique import unique
+
+lst = input().split()
+
+print(' '.join(unique(lst)))
+
+(4)# Write a Python function that checks whether a passed string is pallindrome or not. Import the module to find whether a string is palindrome 
+from palindrome import is_palindrome 
+
+s = input("String:")
+
+print("Is palindrome:",is_palindrome(s))
+
+(5)
+# Write a python function that prints out the first n rows of the Pascal's triangle. Import the module and accept n from the user 
+
+from pascal import pascal
+pascal(int(input("Rows:")))
+
+(6)
+# Write a Python function to create and print a list where the values are square of numbers between two limits(both included). import the module to implement this  
+from square_list import square_list
+
+start = int(input())
+end = int(input())
+
+
+square_list(start,end)
+
+(7)
+#Create a file Amstrong.py and write a function to check whether a number is an Amstrong number. Import the module to generate Amstong numbers between two limits .
+from amstrong import is_amstrong
+
+start = int(input())
+end = int(input())
+
+s = ''
+
+for i in range(start,end):
+    if is_amstrong(i):
+        s += str(i) + ' '
+
+print(s[:-1]) 
+
+(8)
+# Write a python function tocheck whether a number is prime. Import the module to find the prime numbers between 2 limits 
+from prime import is_prime
+
+start = int(input())
+end = int(input())
+
+s = ''
+
+for i in range(start,end+1):
+    if is_prime(i):
+        s+=str(i) + ' '
+
+print(s[:-1])
+
+(9)
+# Write a Python scriot to print
+#1. current date and TimeoutError
+#2. current year
+#3. month of year
+#4. week number of the year
+#5. weekday of the weekday
+#6. day of the year
+#7. day of the month
+#8. day of the week 
+
+# using built in module datetime and time 
+from datetime import datetime
+
+
+now  = datetime.now()
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+]
+
+print(now)
+print(now.year)
+print(months[now.month-1])
+print(now.isocalendar()[1])
+print(days[now.weekday()])
+print(now.timetuple().tm_yday)
+print(now.timetuple().tm_mday)
+print(now.timetuple().tm_wday)
+
+ 
